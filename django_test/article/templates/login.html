@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+   {% if form.errors %}
+     <p class = "error">Sorry, that's not a valid username or password  </p>
+
+{% endif %}
+
+     <form action= "/accounts/auth/" method = "post" >{% csrf_token %}
+       <lablel for ="username"> User name: </lablel>
+       <input type ="text" name="username" value="" id="username">
+       <lablel for ="password"> Password: </lablel>
+       <input type ="password" name="password" value="" id="password">
+
+          <input type ="submit" name="login" />
+
+          </form>
+
+        {% endblock %}
+
+

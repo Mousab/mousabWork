@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+{% extends "base.html" %}
+       {% block sideber %}
+          <ul>
+               <li><a href="/articles/all">Articles</a> </li>
+               <li><a href="/admin/">Admin</a> </li>
+
+           </ul>
+       {% endblock %}
+{% block content %}
+<body>
+<h1>{{ article.title }}</h1>
+<p>{{ article.body }}</p>
+{% endblock %}
+</body>
+</html>
+

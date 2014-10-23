@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Base Template{% endblock %} </title>
+
+      {% load staticfiles %}
+
+      <link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">
+
+
+
+</head>
+<body>
+   <div id="page">
+
+       <div id="sideber">
+          {% block sideber %}
+
+           <ul>
+               <li><a href="/articles/all">Articles</a> </li>
+               <li><a href="/admin/">Admin</a> </li>
+
+           </ul>
+       {% endblock %}
+       </div>
+
+       <div id="content">
+
+           {% block content %}This is the content area{% endblock %}
+           <img src="{% static "images/python.png" %}" width="200" >
+       </div>
+   </div>
+
+</body>
+</html>

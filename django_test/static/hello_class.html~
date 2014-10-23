@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<h1>Articles</h1>
+{% for article in articles %}
+<div>
+    <h2><a href="/articles/get/{{article.id}}/">{{article.titel}}</a>a></a> </h2>
+    <p>{{article.body}}</p>
+</div>
+{% endfor %}
+
+</body>
+</html>
+

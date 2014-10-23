@@ -1,0 +1,508 @@
+/*page title doesn't fit with all subnav: resetting it*/
+#pageTitleText {top:15px !important;z-index:2002;}
+
+/*fonts*/
+@font-face {font-family: Couri;src: url(/layout/fonts/couri.ttf);}
+@font-face {font-family: Cour;src: url(/layout/fonts/cour.ttf);}
+@font-face {font-family: Dragon; src: url(/layout/fonts/Dragon.ttf);}
+@font-face {font-family: Helvetica Neue CE 35 Thin;src: url(/layout/fonts/Helvetica Neue CE 35 Thin.ttf);}
+@font-face {font-family: Helvetica;src: url(/layout/fonts/Helvetica Neue CE 35 Thin.ttf);}
+
+.sendyourname {padding: 1% !important; font-family:Helvetica Neue CE 35 Thin; line-height:1.5em; }
+.sendyourname h2, .sendyourname h3, .sendyourname p {line-height:1.5em; }
+
+.sendyourname input, .sendyourname select, .sendyourname textarea {font-family: Arial, Helvetica, sans-serif;font-size: 16px;}
+.sendyourname textarea {padding:10px 30px; width:220px !important;}
+
+/*counter*/
+.cntBackground{background:url('/images/mep/send-name-to-mars/counterBackgroundFull.png') no-repeat center right; width:300px; height:50px; text-align:right;float:left;color:white;margin:-10px 15px 10px 15px; position:relative; z-index:1;}
+.cntHumans {/* background-color:#eb6937; min-height:74px; height:74px;*/ background:url('/images/mep/send-name-to-mars/orangeGradientBG.jpg') repeat; width:100%; height:50px;}
+    @media only screen and (max-width : 1052px) {.cntHumans {height:75px;}}
+    @media only screen and (max-width : 800px) {.cntHumans {height:120px;} .cntBackground, .cntText, .cntHashTag{display:block; margin:0 auto; clear:both;}.cntText, .cntHashTag{text-align:center;}}
+.cntNumber{ text-align:right;width:100%; margin:11px 0 0 4px;font-size:33px;letter-spacing:0.312em; } 
+.cntText {/*float:left;*/color:#ffffff;/*font-size:13px;line-height:1.2em;*/font-size:1.2em;line-height:1.3em; margin-top:10px; text-transform:uppercase;}
+.cntHashTag {font-size:1.2em;color:#FFDB9F; text-shadow:black 1px 1px 1px; font-weight:bold;}
+
+.mapButtonsBox {float:right; margin-left:10px;}
+.mapBtn {float:right;background-color:#f5a256; border:solid 1px #e76239;color:#b64f2e;font-size:17px;padding:5px 30px 3px 30px; margin: 0 20px 10px 0;
+-webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px; font-weight:bold; border: 1px #b64f2e solid; cursor: pointer}
+.mapBtn:hover {border: 1px #FFFFFF solid}
+
+.formNotesRed {color:rgb(178, 4, 4);clear:both; font-size:16px !important;}
+.formLinkBlue {color:#013394;}
+
+/*send name form*/
+#sendNameInviteFormBox, #sendNameFormBox {position:relative;min-height:549px; width:100%; background-image:url(/images/mep/send-name-to-mars/blueGradientBG.jpg); background-repeat:repeat-x; background-size: 100% 100%;}
+#sampleBoardingPass {width:35%;float:left;min-height:549px;}
+#sendNameFormBox .embedSNM img, #sendNameInviteFormBox .embedSNM img{width: 100px;margin-top: -18px;}
+#sendNameFormBox .boardingpass, #sendNameInviteFormBox .boardingpass{position:relative;margin:25px 3% 0px 3%; z-index:4;}
+#sendNameInviteForm, #sendNameForm {position: relative;width:65%;min-height:549px; background-image:url(/images/mep/send-name-to-mars/sendNameFormBg-30.jpg); background-size: cover;float:right;}
+#sendNameInviteFormContent, #sendNameFormContent {margin:5%;font-size:16px;}
+#sendNameInviteFormContent .formNotesRed, #sendNameFormContent .formNotesRed {font-size:22px; line-height:1.2em; margin:20px 0px;}
+#sampleBoardingPass h2 {color:#ffffff;margin: 0px 20px 0px 30px; font-weight:normal;font-size:27px;}
+#sampleBoardingPass .inviteLink {position:relative;z-index:3;background:url(/images/general/layout/goldenArrow.png) right no-repeat;padding-right:30px;background-size: 25px 60px; display:block; margin: 0px 20px 20px 30px; font-weight:normal;font-size:36px;line-height:1em;}
+.sendyourname .lightBlue {color:#8eb1db;}
+.sendyourname .orange {color:#ec7a21;}
+#sendNameForm .submitBtnBox {width:100%; /*background-image:url(/images/general/layout/largeSubmitButton.png);*/ background:url(/images/general/layout/searchButton.png) top right; background-size: cover;/*min-width:459px;width:459px;min-height:50px;height:50px;*/min-width:260px;width:260px;min-height:56px;height:56px;margin-top: 20px;}
+#sendNameForm #Submit {color:white;font-size:23px; width:100%; height:100%; background-color:transparent; border:none; text-align:left;  cursor:pointer; margin-top:0px;}
+
+/*recaptcha*/
+#recaptcha_widget_div {margin-top: 20px; width:65%}
+.recaptchatable {border: 0px solid #dfdfdf !important; width:100%;}
+#recaptcha_table td { background-color:rgba(163,124,79,0.33); }
+.recaptchatable a img{width:50px !important; height:auto !important;}
+img#recaptcha_logo{margin-top:40px;}
+#captcha_hardtoread{position: relative;color: navy !important;font-size: 80% !Important;font-weight: bold;left: 50%;margin: 0 !important;top: 65px;padding: 0 !important;}
+img#recaptcha_reload {display:none;}
+#recaptcha_reload_btn {background:url(/images/mep/refreshBtn.png?2) left no-repeat !important; background-size: 172px 32px; width:172px !important; height:32px !important; display:block; margin-top:12px;}
+#recaptcha_reload_btn:hover {background-image:url(/images/mep/refreshBtnOver.png?2)!important;}
+img#recaptcha_switch_audio {display:none;}
+#recaptcha_switch_audio_btn {background:url(/images/mep/playBtn.png?2) left no-repeat !important; background-size: 43px 32px; width:43px !important; height:32px !important; display:block; margin-top:2px;}
+#recaptcha_switch_audio_btn:hover {background-image:url(/images/mep/playBtnOver.png?2)!important;}
+img#recaptcha_whatsthis {display:none;}
+#recaptcha_whatsthis_btn {background:url(/images/mep/helpBtn.png?2) left no-repeat !important; background-size: 43px 32px; width:43px !important; height:32px !important; display:block; margin-top:2px;}
+#recaptcha_whatsthis_btn:hover {background-image:url(/images/mep/helpBtnOver.png?2)!important;}
+img#recaptcha_logo {
+	display:none;
+}
+#recaptcha_table {background-image:url(http://www.google.com/recaptcha/api/img/clean/logo.png)!important; background-repeat:no-repeat; background-position:91% 60%; background-size:99px 50px;}
+/*<img width="71" height="36" alt="" id="recaptcha_logo" src="http://www.google.com/recaptcha/api/img/clean/logo.png">*/
+
+/*search form*/
+#sendNameSearchFormBox {position:relative;min-height:549px;  width:100%; background-image:url(/images/mep/send-name-to-mars/night-sky-br2-20.jpg); background-size: cover; min-height:961px; height:961px; text-align:center;}
+#sendNameSearchForm {position: relative;z-index: 2;text-align:left; margin: 50px auto; width:auto; display:table; }
+#sendNameSearchFormBox h1 {font-family: Dragon, Arial, Helvetica; color:#8daed9;padding-top:100px;margin:0px auto;font-size:70px;font-weight:normal;}
+#sendNameSearchFormBox h2 {color:#f39e1f;font-size:30px;font-weight:normal;margin:0px auto;}
+#sendNameSearchFormBox .questionMark{font-family:Arial, Helvetica, sans-serif; font-weight: thin}
+/*#sendNameSearchForm .submitBtnBox {width:100%; background-image:url(/images/general/layout/searchButton.png); background-size: cover;min-width:355px;width:355px;min-height:56px;height:56px;margin-top: 20px;}*/
+#sendNameSearchForm .submitBtnBox {width:100%; background-image:url(/images/general/layout/searchButton.png); background-size: cover;min-width:355px;width:355px;min-height:56px;height:56px;margin-top: 20px;}
+#sendNameSearchForm #SearchSubmit {color:white;font-size:23px; width:100%; height:100%; background-color:transparent; border:none; text-align:left; cursor:pointer; margin-top:0px;}
+
+/*invite form*/
+/*#sendNameInviteFormBox {position:relative;min-height:549px;  width:100%; background-image:url(/images/mep/send-name-to-mars/sendNameFormBg.jpg); background-size: cover; text-align:center; padding-top:20px;}
+#sendNameInviteForm {position:relative;text-align:left; margin: 50px auto; width:auto; display:table; }*/
+#sendNameInviteFormBox .social{width:87%; margin:0 auto; padding-left:3%;}
+#sendNameInviteFormBox .social img {width:18%;}
+#sendNameInviteFormBox h2 {color:#2661B3;font-size:33px;font-weight:normal;margin:0px auto;}
+#sendNameInviteForm .submitBtnBox {width:100%; background-image:url(/images/general/layout/searchButton.png); background-size: cover; background-repeat:no-repeat; min-width:402px;width:402px;min-height:64px;height:64px;margin: 0 auto;}
+#sendNameInviteForm #Submit {color:white;font-size:30px; width:100%; height:100%; background-color:transparent; border:none; text-align:left;  cursor:pointer; margin-top:0px;}
+
+/*decorative borders*/
+.sendNameSearchFormBox-topBorderMask {
+    background-image: url("/images/general/layout/topLeftCorner.png"), 
+	url("/images/general/layout/topRightCorner.png");
+    background-origin: border-box, border-box;
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    /*height:568px;*/
+	position:absolute; top:0; width:100%;
+	height:549px;
+}
+
+.sendNameSearchFormBox-rightBorderMask {
+    background-image: url("/images/general/layout/topRightCorner.png");
+    background-origin: border-box;
+    background-position: right top;
+    background-repeat: no-repeat;
+    position:absolute; top:0; right:0; 
+	height:549px; width:35px; 
+}
+
+.sendNameSearchFormBox-leftBorderMask {
+    background-image: url("/images/general/layout/topLeftCorner.png");
+    background-origin: border-box;
+    background-position: left top;
+    background-repeat: no-repeat;
+    position:absolute; top:0; left:0; 
+	height:549px; width:35px; 
+}
+
+/*1-2-3*/
+.step1-2-3bg {height: 157px; background-image:url(/images/general/layout/1-2-3-btn-bg.png); background-repeat:repeat-x; width:80%; position:relative; }
+.step1-2-3bg-red {height: 157px; margin-top:-157px; background-image:url(/images/general/layout/1-2-3-btn-bg-active.png); background-repeat:repeat-x; width:50%; position:relative; }
+.step1-2-3 {height: 157px; margin-top:-157px; width:100%; position:relative;}
+.step {/*width:33.3%;*/width:25%;height: 157px;position:relative;padding:0px;float:left; background-image:url(/images/general/layout/1-2-3-btn.png); background-position:top right;}
+.step.active {background-image:url(/images/general/layout/1-2-3-btn-active2.png); background-position:top right; background-size:100% 157px;}
+.step a, .step span {text-decoration:none;color:#8eb1db;}
+.step a:hover {text-decoration:underline; color:#C3CEDB;}
+.step.active a, .step.active span {text-decoration:none;color:#ffffff;}
+.stepNumber {/*width:83px; height:91px;*/  width:79px; height:86px; float:left; margin-left:15px; margin-top:34px; background-size:contain; background-repeat:no-repeat;}
+.stepNumber.active {/*width:84px;*/ width:79px;}
+@media only screen and (max-width: 950px) {
+    .stepNumber {width:40px; height:43px; }
+	.stepNumber.active {width:40px; }
+}
+.stepText {float:left; margin-left:10px; color:#8eb1db;/*margin-top:60px;*/ margin-top:50px; font-size:26px; width:50%;}
+.stepText.active {color:#ffffff;}
+.stepNumber1 {background-image:url(/images/general/layout/btnInactive01.png?1);}
+.stepNumber1.active {background-image:url(/images/general/layout/btnActive01.png?1);}
+.stepNumber2 {background-image:url(/images/general/layout/btnInactive02.png?1);}
+.stepNumber2.active {background-image:url(/images/general/layout/btnActive02.png?1);}
+.stepNumber3 {background-image:url(/images/general/layout/btnInactive03.png?1);}
+.stepNumber3.active {background-image:url(/images/general/layout/btnActive03.png?1);}
+.stepNumber4 {background-image:url(/images/general/layout/btnInactive04.png);}
+.stepNumber4.active {background-image:url(/images/general/layout/btnActive04.png);}
+.s1 {display:block; width:100%; height:100%; margin:0px; padding:0px;}
+.s3 {font-size:12px;line-height:1.2em;white-space: nowrap;}
+.s4 {font-size:12px;line-height:1.2em;white-space: nowrap;}
+
+.errorMessage {font-weight:bold;color:#cc0000 !important; font-size:1.5em; font-style:italic;}
+
+/*forms*/
+.class-form {}
+
+.class-form .input-label {
+   /* max-height: 30px;*/
+    max-height: 40px;
+}
+
+.class-form .row {
+    position: relative;
+    margin-top: 20px; 
+}
+
+.class-form .row img{
+    position: absolute;
+    z-index: 1;
+}
+
+.class-form .row .title{
+    position: absolute;
+    z-index: 2;
+    font-family:Arial, Helvetica; 
+    /*font-size: 12px;*/
+	font-size: 16px;
+    font-weight: bold;
+	color:#223770;
+    /*padding-top: 7px;*/
+    padding-left: 10px;
+}
+.class-form .row .title label {line-height: 40px; }
+.class-form .row input{
+    /*margin-left: 90px;*/ margin-left: 120px;
+    /*height: 25px;*/ height: 33px; 
+    margin-top: 2px;
+    width: 45%;
+    background-color:rgba(163,124,79,0.33);
+    border: 0;
+    /*opacity:.33;*/
+    padding-left: 30px;
+	color:#000000;
+}
+.class-form .row .submitBtnBox input {padding-left: 20px;}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #404040;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #404040;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #404040;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #404040;
+}
+#sendNameSearchForm .class-form .row input {color:#d2b49a;background-color:rgba(5,5,5,0.50); width:65%;}
+
+#sendNameSearchForm ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #d2b49a;
+}
+#sendNameSearchForm :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #d2b49a;
+    opacity:  1;
+}
+#sendNameSearchForm ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #d2b49a;
+    opacity:  1;
+}
+#sendNameSearchForm :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #d2b49a;
+}
+
+
+.class-form .select {
+    width: 48%;
+    /*height: 25px;*/ height: 33px;
+    /*margin-left: 90px;*/ margin-left: 120px;
+    margin-top: 3px;
+    overflow: hidden;
+    /*background-color:rgba(163,124,79,0.15);*/
+	background-color:rgba(163,124,79,0.33);
+    /*background: url(new_arrow.png) no-repeat right #ddd;*/
+    /*border: 1px solid #ccc;*/
+	border: 0px solid #ccc;
+	color:#404040;
+}
+#sendNameSearchForm .class-form .select {/*color:#bc956a;*/color:#d2b49a;background-color:rgba(5,5,5,0.50); width:70%;}
+.class-form .select.normalize {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+}
+
+.class-form .row input[type="submit"]{
+    margin-left: 0px;
+    width: 340px;
+}
+.class-form .input-dropdown {
+    position: absolute;
+    left: 60%;
+    height: 18px;
+    top: 10px;
+}
+.ie .class-form .input-dropdown, .ff3 .class-form .input-dropdown {display:none;}
+#sendNameSearchForm .class-form .input-dropdown {left:86%}
+
+.class-form .input-select-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+
+/* MAP PAGE World/US */
+#mapPage {position:relative;}
+#mapPage .mapBtn.active{background-color: #F5DFCB}
+#mapPage .mapHeader{background:url('/images/mep/send-name-to-mars/map/mapHeaderImage.jpg') center center; width:100%; height:335px;}
+#mapPage .mapHeader .stepNumber{ position:relative; top:30%; left:5%;}
+#mapPage .mapHeader .stepNumber img { width:100px; }
+#mapPage .mapHeader .stepNumber span { font-size: 50px; text-transform: uppercase;color: #98B8DE;position: relative;top: -65px; font-family: Dragon, Arial, Helvetica; left: 115px; line-height: 85%;}
+
+#mapPage .cntHumans{ padding-top:20px;position:relative;}
+#mapPage .mapContainer{ background:url('/images/mep/send-name-to-mars/map/mapGoldBackground.png');background-repeat: round;}
+#mapPage .scale{ width:78%; display:inline-block;text-align: right; /*right:0;*/ margin-bottom: 25px}
+#mapPage .scale img{ width:60%; position:relative; right:50px;}
+#mapPage #googleMap{width:100%; height:auto; text-align:center; overflow:hidden;}
+#mapPage #googleMap div:first-child{width:100% !important;}
+/*WORLD MAP*/
+#mapPage .mapCountryLegend{/*margin-top:-150px;*/ position: relative; /*bottom:0; left:0;*/  margin:20px; padding-bottom: 20px;}
+#mapPage .countryLegend{ line-height:2em;
+    background: #eb6937;display:table;
+    color: white;
+    text-transform: uppercase;
+    margin: 0px auto;
+}
+#mapPage .countryLegend .countryLegendTitle{text-align:center; font-size:80%; margin: 20px 20px -14px 20px;}
+#mapPage .countryLegend .countryLegendTitle .hashTag{font-weight:bold; text-shadow: black 1px 1px 1px;
+font-weight: bold; color:#FFDB9F;}
+#mapPage .countryLegend .countryList{ list-style:none; text-shadow: black 1px 1px 2px; /*padding-left:10%;*/ font-size:150%;}
+#mapPage .countryLegend .countryList li { list-style:none; }
+#mapPage .countryLegend .countryList .countryName{ /*width:48%;*/ text-align:left; display:inline-block; font-weight:normal; /*letter-spacing:-1px;*/}
+#mapPage .countryLegend .countryList .countNumber{ font-weight:bold; /*padding-right:10%; width:38%;*/ text-align:right; display:inline-block; float:right; clear:right;}
+/*UNITED STATES*/
+#mapPage .mapStateLegend{ margin-top:0;position: relative; bottom:0; padding-bottom: 20px;}
+#mapPage .stateLegend{ line-height:2em; background:#eb6937; display:table; color:white; text-transform:uppercase; /*min-width:180px; max-height:300px; overflow:auto;*/ margin: 0px auto;}
+#mapPage .stateLegend .stateLegendTitle{text-align:center; font-size:80%;  margin: 20px 20px -14px 20px;}
+#mapPage .stateLegend .stateLegendTitle .hashTag{font-weight:bold;  text-shadow: black 1px 1px 1px;
+font-weight: bold; color:#FFDB9F;}
+#mapPage .stateLegend .stateList{ list-style:none; text-shadow: black 1px 1px 2px; /*padding-left:10%;*/ font-size:150%;}
+#mapPage .stateLegend .stateList li { list-style:none; }
+#mapPage .stateLegend .stateList .stateName{ /*width:48%;*/ text-align:left; display:inline-block; font-weight:normal; /*letter-spacing:-1px;*/}
+#mapPage .stateLegend .stateList .countNumber{ font-weight:bold; /*padding-right:10%; width:38%;*/ text-align:right; display:inline-block; float:right; clear:right;}
+
+/*boarding pass and social media*/
+    #page-confirmation.background {
+        /*background: url('/images/general/layout/blueGradientBackground.jpg');
+        background-position:50% 50%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+		min-height:549px; width:100%;*/
+    }
+
+    #page-confirmation .boarding {
+        margin-top: 200px;
+        padding-left: 50px;
+        padding-right: 50px;
+        position: relative;
+    }
+
+    #page-confirmation .image-boarding {
+        max-width: 100%;
+        width: 100%;
+		z-index: 2;
+        position: relative;
+    }
+
+    #page-confirmation .success {
+        font-family: Dragon, Arial, Helvetica;
+        font-size: 40px;
+        color: #8eafda;
+        position: absolute;
+        top: -90px;
+    }
+
+    #page-confirmation .description {
+        font-family: Dragon, Arial, Helvetica;
+        font-size: 22px;
+        color: #8eafda;
+        position: absolute;
+        top: -101px;
+        left: 270px;
+        letter-spacing: 2px;
+    }
+    html.ie #page-confirmation .description { left: 275px; }
+
+    #page-confirmation .white {
+        color: white;
+    }
+
+    #page-confirmation .orange {
+        color: #ec7a22;
+    }
+
+    #page-confirmation .yellow {
+        color: #f3b017;
+    }
+
+    #page-confirmation .light-orange {
+        color: #febf72;
+    }
+
+    #page-confirmation .font-helvetica {
+        font-family: Helvetica;
+    }
+
+    #page-confirmation .font-cour {
+        font-family: Cour;
+    }
+
+    #page-confirmation .your-name {
+        font-size: 15px;
+        font-weight: normal;
+        margin-bottom: 4px;
+    }
+
+    #page-confirmation .and-to {
+        font-size: 11px;
+        font-weight: normal;
+        margin-bottom: 4px;
+        position: relative;
+        top: -5px;
+    }
+
+    #page-confirmation .name {
+        font-size: 21px;
+        font-family: Helvetica;
+        font-weight: normal;
+        margin-bottom: 4px;
+        position: absolute;
+        top: 39%;
+        margin-left: 33%;
+		z-index: 3;
+    }
+
+    #page-confirmation .graphic-right {
+        position: absolute;
+        top: -100px;
+        right: 50px;
+        max-height: 60%;
+		z-index: 2;
+    }
+
+    #page-confirmation .boarding-pass{
+        position: absolute;
+        top: -39px;
+        left: 61px;
+        font-family: Helvetica;
+        color: #ff6623;
+    }
+
+    #page-confirmation .invite {
+        font-family: Helvetica;
+        position: absolute;
+        bottom: -77px;
+        left: 64px;
+        color: white;
+    }
+
+    #page-confirmation .social {
+        font-family: Helvetica;
+        position: absolute;
+        bottom: -122px;
+        /* left: 50%; */
+        color: white;
+        /* margin-left: -190px; */
+        bottom: -172px;
+    }
+
+    #page-confirmation .social a {
+        text-decoration: none;
+    }
+
+    #page-confirmation .social img {
+        max-width: 70px;
+    }
+
+    #page-confirmation  .download {
+        position: absolute;
+        /*bottom: -29px;*/
+		bottom: -45px;
+        right: 70px;
+        z-index: 1;
+    }
+
+    #page-confirmation .download img {
+        max-height: 50px;
+    }
+
+    #page-confirmation .download a {
+        text-decoration: none;
+    }
+	
+    #page-confirmation .certificate-id {
+        position: absolute;
+        top: 26px;
+        right: 126px;
+        z-index: 3;
+        color: #000000;
+        font-family: Cour;
+    }
+
+    @media only screen and (max-width : 1000px) {
+        #page-confirmation .certificate-id{
+            top: 46px;
+            left: 42%;
+        }     
+    }
+
+    .page-confirmation-wrapper {
+        /*height: 869px;*/height: 880px;
+        position: absolute;
+        background: url('/images/general/layout/blueGradientBackground-q12.jpg');
+        background-position:50% 50%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        margin-right: 10px;
+        width: 98%;
+    }
+
+    .decorative-element {
+        position: absolute;
+        left: 45px;
+        top: -44PX;
+        max-height: 84%;
+        z-index: 4;
+    }
+/* Embed Code style */
+.embedSNM {width:100%;margin-right:3%;margin-bottom:25px;height:34px;position:relative;z-index:3;}
+.ico-embed {color: #2661B3; margin:2px 3% !important; font-size:85%; }
+#sampleBoardingPass .ico-embed {color: #ffffff; font-size:65%;}
+.lastdaynote {color:#255182; font-family:Arial,Helvetica,sans-serif; font-size:36px; font-weight:normal; line-height:normal; text-align:center; margin-top:0px;}
+
+
+/*Invite Link*/
+.inviteLink{ color: #F9D290;}
+#mainBoardingPassStatement{position:relative; top:100px;}
+
+#sendNameInviteFormBox .fancybox-overlay,
+#sendNameFormBox .fancybox-overlay {
+    z-index: 888010;
+}
+
+#pageTitleText{display:none;}
